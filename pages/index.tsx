@@ -14,6 +14,10 @@ import ListItemButton from '@mui/material/ListItemButton'
 import ListItemIcon from '@mui/material/ListItemIcon'
 import ListItemText from '@mui/material/ListItemText'
 
+//Icons
+import FileUploadIcon from '@mui/icons-material/FileUpload';
+import FileDownloadIcon from '@mui/icons-material/FileDownload';
+
 import Map from "../components/Map"
 import Footer from '../components/Footer'
 
@@ -27,11 +31,7 @@ export default function Home() {
         position="fixed"
         sx={{width: `calc(100% - ${drawerWidth}px)`, ml: `${drawerWidth}px`}}
       >
-        <Toolbar>
-          <Typography variant="h6" noWrap component="div">
-            Mappy
-          </Typography>
-        </Toolbar>
+        <Toolbar />
       </AppBar>
       <Drawer
         sx={{
@@ -45,19 +45,29 @@ export default function Home() {
         variant="permanent"
         anchor="left"
       >
-        <Toolbar/>
+        <Toolbar>
+          <Typography variant="h6" noWrap component="div">
+            Mappy
+          </Typography>
+        </Toolbar>
         <Divider/>
         <List>
-          {['Import GeoJSON', 'Export map as GeoJSON'].map((text, index) => (
-            <ListItem key={text} disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  ICON
-                </ListItemIcon>
-                <ListItemText primary={text}/>
-              </ListItemButton>
-            </ListItem>
-          ))}
+          <ListItem key={"import"} disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                <FileUploadIcon />
+              </ListItemIcon>
+              <ListItemText primary={"Import GeoJSON"}/>
+            </ListItemButton>
+          </ListItem>
+          <ListItem key={"export"} disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                <FileDownloadIcon />
+              </ListItemIcon>
+              <ListItemText primary={"Export as GeoJSON"}/>
+            </ListItemButton>
+          </ListItem>
         </List>
         <Divider/>
       </Drawer>
