@@ -43,6 +43,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:59c5046a522f7355b5fb0a6a34b2f1df860698f99a239fce7f44522f4a51dce3527088cc48e2e63643269b74ab92ec060b45c0c3d9a0281d6256cf7549b2315a#npm:18.2.0"],\
             ["react-leaflet", "virtual:59c5046a522f7355b5fb0a6a34b2f1df860698f99a239fce7f44522f4a51dce3527088cc48e2e63643269b74ab92ec060b45c0c3d9a0281d6256cf7549b2315a#npm:4.1.0"],\
+            ["react-no-ssr", "virtual:59c5046a522f7355b5fb0a6a34b2f1df860698f99a239fce7f44522f4a51dce3527088cc48e2e63643269b74ab92ec060b45c0c3d9a0281d6256cf7549b2315a#npm:1.1.0"],\
             ["sass", "npm:1.56.1"],\
             ["typescript", "patch:typescript@npm%3A4.9.3#~builtin<compat/typescript>::version=4.9.3&hash=d73830"]\
           ],\
@@ -1414,6 +1415,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["babel-runtime", [\
+        ["npm:6.26.0", {\
+          "packageLocation": "./.yarn/cache/babel-runtime-npm-6.26.0-d38e7946b4-8aeade9466.zip/node_modules/babel-runtime/",\
+          "packageDependencies": [\
+            ["babel-runtime", "npm:6.26.0"],\
+            ["core-js", "npm:2.6.12"],\
+            ["regenerator-runtime", "npm:0.11.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["balanced-match", [\
         ["npm:1.0.2", {\
           "packageLocation": "./.yarn/cache/balanced-match-npm-1.0.2-a53c126459-9706c088a2.zip/node_modules/balanced-match/",\
@@ -1657,6 +1669,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/convert-source-map-npm-1.9.0-e294555f4b-dc55a1f28d.zip/node_modules/convert-source-map/",\
           "packageDependencies": [\
             ["convert-source-map", "npm:1.9.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["core-js", [\
+        ["npm:2.6.12", {\
+          "packageLocation": "./.yarn/unplugged/core-js-npm-2.6.12-0b93d77d31/node_modules/core-js/",\
+          "packageDependencies": [\
+            ["core-js", "npm:2.6.12"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -3420,6 +3441,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:59c5046a522f7355b5fb0a6a34b2f1df860698f99a239fce7f44522f4a51dce3527088cc48e2e63643269b74ab92ec060b45c0c3d9a0281d6256cf7549b2315a#npm:18.2.0"],\
             ["react-leaflet", "virtual:59c5046a522f7355b5fb0a6a34b2f1df860698f99a239fce7f44522f4a51dce3527088cc48e2e63643269b74ab92ec060b45c0c3d9a0281d6256cf7549b2315a#npm:4.1.0"],\
+            ["react-no-ssr", "virtual:59c5046a522f7355b5fb0a6a34b2f1df860698f99a239fce7f44522f4a51dce3527088cc48e2e63643269b74ab92ec060b45c0c3d9a0281d6256cf7549b2315a#npm:1.1.0"],\
             ["sass", "npm:1.56.1"],\
             ["typescript", "patch:typescript@npm%3A4.9.3#~builtin<compat/typescript>::version=4.9.3&hash=d73830"]\
           ],\
@@ -4119,6 +4141,29 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["react-no-ssr", [\
+        ["npm:1.1.0", {\
+          "packageLocation": "./.yarn/cache/react-no-ssr-npm-1.1.0-3d1d7ce2e0-fa253cecbe.zip/node_modules/react-no-ssr/",\
+          "packageDependencies": [\
+            ["react-no-ssr", "npm:1.1.0"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:59c5046a522f7355b5fb0a6a34b2f1df860698f99a239fce7f44522f4a51dce3527088cc48e2e63643269b74ab92ec060b45c0c3d9a0281d6256cf7549b2315a#npm:1.1.0", {\
+          "packageLocation": "./.yarn/__virtual__/react-no-ssr-virtual-2789b0050e/0/cache/react-no-ssr-npm-1.1.0-3d1d7ce2e0-fa253cecbe.zip/node_modules/react-no-ssr/",\
+          "packageDependencies": [\
+            ["react-no-ssr", "virtual:59c5046a522f7355b5fb0a6a34b2f1df860698f99a239fce7f44522f4a51dce3527088cc48e2e63643269b74ab92ec060b45c0c3d9a0281d6256cf7549b2315a#npm:1.1.0"],\
+            ["@types/react", "npm:18.0.25"],\
+            ["babel-runtime", "npm:6.26.0"],\
+            ["react", "npm:18.2.0"]\
+          ],\
+          "packagePeers": [\
+            "@types/react",\
+            "react"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["react-transition-group", [\
         ["npm:4.4.5", {\
           "packageLocation": "./.yarn/cache/react-transition-group-npm-4.4.5-98ea4ef96e-7560284010.zip/node_modules/react-transition-group/",\
@@ -4172,6 +4217,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["regenerator-runtime", [\
+        ["npm:0.11.1", {\
+          "packageLocation": "./.yarn/cache/regenerator-runtime-npm-0.11.1-a31e4f8dcd-3c97bd2c7b.zip/node_modules/regenerator-runtime/",\
+          "packageDependencies": [\
+            ["regenerator-runtime", "npm:0.11.1"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
         ["npm:0.13.11", {\
           "packageLocation": "./.yarn/cache/regenerator-runtime-npm-0.13.11-90bf536060-27481628d2.zip/node_modules/regenerator-runtime/",\
           "packageDependencies": [\

@@ -1,16 +1,16 @@
 .container {
-  padding: 0 2rem;
+//  padding: 0 2rem;
 }
 
-.main {
-  min-height: 100vh;
-  padding: 4rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+//.main {
+//  min-height: 100vh;
+//  padding: 4rem 0;
+//  flex: 1;
+//  display: block;
+//  flex-direction: column;
+//  justify-content: center;
+//  align-items: center;
+//}
 
 .title a {
   color: #0070f3;
@@ -110,4 +110,8 @@
   .logo img {
     filter: invert(1);
   }
+}
+
+.homeMap {
+  height: calc(95vh - 70px);
 }
