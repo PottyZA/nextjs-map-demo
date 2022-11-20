@@ -15,8 +15,7 @@ RUN \
 
 # Environment variables must be present at build time
 # https://github.com/vercel/next.js/discussions/14030
-ARG ENV_VARIABLE
-ENV NODE_ENV="production"
+ENV NODE_ENV production
 
 # Uncomment the following line to disable telemetry at build time
 # ENV NEXT_TELEMETRY_DISABLED 1
