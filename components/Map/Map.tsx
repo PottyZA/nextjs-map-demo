@@ -18,9 +18,7 @@ type MapProps = {
 
 const Map: FC<MapProps> = ({children, className, ...rest}) => {
   const DEFAULT_CENTER = [38.907132, -77.036546]
-
   let mapClassName = styles.map;
-
   if (className) {
     mapClassName = `${mapClassName} ${className}`;
   }
@@ -37,11 +35,14 @@ const Map: FC<MapProps> = ({children, className, ...rest}) => {
     })();
   }, []);
 
+
+
   return (
-    <MapContainer className={mapClassName} center={DEFAULT_CENTER} zoom={12}>
+    <MapContainer className={mapClassName} center={DEFAULT_CENTER} zoom={12} minZoom={4}>
       <ReactLeaflet.TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution="&copy; <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
+        noWrap
       />
       <ReactLeaflet.Marker position={DEFAULT_CENTER}>
         <ReactLeaflet.Popup>
