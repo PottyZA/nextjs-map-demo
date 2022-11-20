@@ -1,7 +1,7 @@
 import {useEffect, useState, FC} from 'react';
 import L from 'leaflet';
 import * as ReactLeaflet from 'react-leaflet';
-import {EditControl} from "react-leaflet-draw"
+import {useLeafletContext} from "@react-leaflet/core";
 
 import 'leaflet/dist/leaflet.css';
 import 'leaflet-draw/dist/leaflet.draw.css'
@@ -25,45 +25,64 @@ type MapProps = {
   className: String
 }
 
-const MapComponent = () => {
-  const map = ReactLeaflet.useMap()
+//Geoman provides advanced editing capabilities (needed for MultiPolygons)
+const Geoman = () => {
+  const context = useLeafletContext();
 
   useEffect(() => {
-    L.PM.setOptIn(true)
+    const leafletContainer = context.layerContainer || context.map;
 
-    map.pm.addControls({
-      position: 'topright',
-      drawCircle: false,
+    leafletContainer.pm.addControls({
+      drawMarker: false
     });
 
-    const json = JSON.parse(sampleGeoJson)
+    leafletContainer.pm.setGlobalOptions({pmIgnore: false});
 
-    let layer = L.geoJSON().addTo(map)
-    layer.addData(json)
+    leafletContainer.on("pm:create", (e) => {
+      console.log(e)
+      if (e.layer && e.layer.pm) {
+        const shape = e;
 
-    map.pm.enableGlobalEditMode()
-  }, [])
+        // enable editing of shape
+        shape.layer.pm.enable();
 
+        console.log(`object created: ${shape.layer.pm.getShape()}`);
+        // console.log(leafletContainer.pm.getGeomanLayers(true).toGeoJSON());
+        leafletContainer.pm
+          .getGeomanLayers(true)
+          .bindPopup("i am whole")
+          .openPopup();
+        leafletContainer.pm
+          .getGeomanLayers()
+          .map((layer, index) => layer.bindPopup(`I am figure N° ${index}`));
 
-  const defaultMarkers = [[-33.918861, 18.423300]]
-  const [markers, setMarkers] = useState(defaultMarkers)
+        shape.layer.on("pm:edit", (e) => {
+          const event = e;
+          console.log(e)
+          // console.log(leafletContainer.pm.getGeomanLayers(true).toGeoJSON());
+        });
+      }
+    });
 
-  return (
-    <><ReactLeaflet.TileLayer
-      url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-      attribution="&copy; <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
-      noWrap
-    />
-      {markers.map((marker) => {
-        return (<ReactLeaflet.Marker position={marker}>
-          <ReactLeaflet.Popup>
-            A pretty CSS3 popup. <br/> Easily customizable.
-          </ReactLeaflet.Popup>
-        </ReactLeaflet.Marker>)
-      })}
-    </>
-  )
-}
+    console.log(leafletContainer.pm.getGeomanLayers())
+
+    leafletContainer.on("pm:globaleditmodetoggled", (e) => {
+      console.log(e)
+    })
+
+    leafletContainer.on("pm:remove", (e) => {
+      console.log("object removed");
+      // console.log(leafletContainer.pm.getGeomanLayers(true).toGeoJSON());
+    });
+
+    return () => {
+      leafletContainer.pm.removeControls();
+      leafletContainer.pm.setGlobalOptions({pmIgnore: true});
+    };
+  }, [context]);
+
+  return null;
+};
 
 
 const Map: FC<MapProps> = ({children, className, geojsonObjects, ...rest}) => {
@@ -74,6 +93,8 @@ const Map: FC<MapProps> = ({children, className, geojsonObjects, ...rest}) => {
     mapClassName = `${mapClassName} ${className}`;
   }
 
+  // TODO: remove sample
+  const json = JSON.parse(sampleGeoJson)
 
   useEffect(() => {
     (async function init() {
@@ -90,7 +111,13 @@ const Map: FC<MapProps> = ({children, className, geojsonObjects, ...rest}) => {
   //  <ReactLeaflet.GeoJSON data={json}>
   return (
     <MapContainer className={mapClassName} center={DEFAULT_CENTER} zoom={12} minZoom={4}>
-      <MapComponent />
+      <ReactLeaflet.TileLayer
+        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        attribution="&copy; <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
+        noWrap
+      />
+      <ReactLeaflet.GeoJSON data={json}/>
+      <Geoman/>
     </MapContainer>
   )
 }
