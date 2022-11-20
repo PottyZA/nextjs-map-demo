@@ -31,8 +31,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@emotion/react", "virtual:59c5046a522f7355b5fb0a6a34b2f1df860698f99a239fce7f44522f4a51dce3527088cc48e2e63643269b74ab92ec060b45c0c3d9a0281d6256cf7549b2315a#npm:11.10.5"],\
             ["@emotion/styled", "virtual:59c5046a522f7355b5fb0a6a34b2f1df860698f99a239fce7f44522f4a51dce3527088cc48e2e63643269b74ab92ec060b45c0c3d9a0281d6256cf7549b2315a#npm:11.10.5"],\
             ["@fontsource/roboto", "npm:4.5.8"],\
+            ["@geoman-io/leaflet-geoman-free", "virtual:59c5046a522f7355b5fb0a6a34b2f1df860698f99a239fce7f44522f4a51dce3527088cc48e2e63643269b74ab92ec060b45c0c3d9a0281d6256cf7549b2315a#npm:2.13.1"],\
             ["@mui/icons-material", "virtual:59c5046a522f7355b5fb0a6a34b2f1df860698f99a239fce7f44522f4a51dce3527088cc48e2e63643269b74ab92ec060b45c0c3d9a0281d6256cf7549b2315a#npm:5.10.14"],\
             ["@mui/material", "virtual:59c5046a522f7355b5fb0a6a34b2f1df860698f99a239fce7f44522f4a51dce3527088cc48e2e63643269b74ab92ec060b45c0c3d9a0281d6256cf7549b2315a#npm:5.10.14"],\
+            ["@react-leaflet/core", "virtual:59c5046a522f7355b5fb0a6a34b2f1df860698f99a239fce7f44522f4a51dce3527088cc48e2e63643269b74ab92ec060b45c0c3d9a0281d6256cf7549b2315a#npm:2.1.0"],\
             ["@types/leaflet", "npm:1.9.0"],\
             ["@types/node", "npm:18.11.9"],\
             ["@types/react", "npm:18.0.25"],\
@@ -41,10 +43,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-config-next", "virtual:59c5046a522f7355b5fb0a6a34b2f1df860698f99a239fce7f44522f4a51dce3527088cc48e2e63643269b74ab92ec060b45c0c3d9a0281d6256cf7549b2315a#npm:13.0.4"],\
             ["file-loader", "virtual:59c5046a522f7355b5fb0a6a34b2f1df860698f99a239fce7f44522f4a51dce3527088cc48e2e63643269b74ab92ec060b45c0c3d9a0281d6256cf7549b2315a#npm:6.2.0"],\
             ["leaflet", "npm:1.9.3"],\
+            ["leaflet-draw", "npm:1.0.4"],\
             ["next", "virtual:59c5046a522f7355b5fb0a6a34b2f1df860698f99a239fce7f44522f4a51dce3527088cc48e2e63643269b74ab92ec060b45c0c3d9a0281d6256cf7549b2315a#npm:13.0.4"],\
+            ["prop-types", "npm:15.8.1"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:59c5046a522f7355b5fb0a6a34b2f1df860698f99a239fce7f44522f4a51dce3527088cc48e2e63643269b74ab92ec060b45c0c3d9a0281d6256cf7549b2315a#npm:18.2.0"],\
             ["react-leaflet", "virtual:59c5046a522f7355b5fb0a6a34b2f1df860698f99a239fce7f44522f4a51dce3527088cc48e2e63643269b74ab92ec060b45c0c3d9a0281d6256cf7549b2315a#npm:4.1.0"],\
+            ["react-leaflet-draw", "virtual:59c5046a522f7355b5fb0a6a34b2f1df860698f99a239fce7f44522f4a51dce3527088cc48e2e63643269b74ab92ec060b45c0c3d9a0281d6256cf7549b2315a#npm:0.20.4"],\
             ["react-no-ssr", "virtual:59c5046a522f7355b5fb0a6a34b2f1df860698f99a239fce7f44522f4a51dce3527088cc48e2e63643269b74ab92ec060b45c0c3d9a0281d6256cf7549b2315a#npm:1.1.0"],\
             ["sass", "npm:1.56.1"],\
             ["typescript", "patch:typescript@npm%3A4.9.3#~builtin<compat/typescript>::version=4.9.3&hash=d73830"]\
@@ -417,6 +422,34 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@gar-promisify-npm-1.1.3-ac1a325862-4059f790e2.zip/node_modules/@gar/promisify/",\
           "packageDependencies": [\
             ["@gar/promisify", "npm:1.1.3"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@geoman-io/leaflet-geoman-free", [\
+        ["npm:2.13.1", {\
+          "packageLocation": "./.yarn/cache/@geoman-io-leaflet-geoman-free-npm-2.13.1-e09a86af4e-952b681580.zip/node_modules/@geoman-io/leaflet-geoman-free/",\
+          "packageDependencies": [\
+            ["@geoman-io/leaflet-geoman-free", "npm:2.13.1"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:59c5046a522f7355b5fb0a6a34b2f1df860698f99a239fce7f44522f4a51dce3527088cc48e2e63643269b74ab92ec060b45c0c3d9a0281d6256cf7549b2315a#npm:2.13.1", {\
+          "packageLocation": "./.yarn/__virtual__/@geoman-io-leaflet-geoman-free-virtual-c2065568a5/0/cache/@geoman-io-leaflet-geoman-free-npm-2.13.1-e09a86af4e-952b681580.zip/node_modules/@geoman-io/leaflet-geoman-free/",\
+          "packageDependencies": [\
+            ["@geoman-io/leaflet-geoman-free", "virtual:59c5046a522f7355b5fb0a6a34b2f1df860698f99a239fce7f44522f4a51dce3527088cc48e2e63643269b74ab92ec060b45c0c3d9a0281d6256cf7549b2315a#npm:2.13.1"],\
+            ["@turf/boolean-contains", "npm:6.5.0"],\
+            ["@turf/kinks", "npm:6.5.0"],\
+            ["@turf/line-intersect", "npm:6.5.0"],\
+            ["@turf/line-split", "npm:6.5.0"],\
+            ["@types/leaflet", "npm:1.9.0"],\
+            ["leaflet", "npm:1.9.3"],\
+            ["lodash", "npm:4.17.21"],\
+            ["polygon-clipping", "npm:0.15.3"]\
+          ],\
+          "packagePeers": [\
+            "@types/leaflet",\
+            "leaflet"\
           ],\
           "linkType": "HARD"\
         }]\
@@ -932,10 +965,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:3998757a8258ce2c5e0e4e5db05b2e33abcba61f8052f75fd163accb6dcb942dafff601be0bcf09fc0137380a29be94097c57291ea5f2c1eff63c9b8ef4e588b#npm:2.1.0", {\
-          "packageLocation": "./.yarn/__virtual__/@react-leaflet-core-virtual-adf60b05a9/0/cache/@react-leaflet-core-npm-2.1.0-de483ca53f-c11a15fb71.zip/node_modules/@react-leaflet/core/",\
+        ["virtual:59c5046a522f7355b5fb0a6a34b2f1df860698f99a239fce7f44522f4a51dce3527088cc48e2e63643269b74ab92ec060b45c0c3d9a0281d6256cf7549b2315a#npm:2.1.0", {\
+          "packageLocation": "./.yarn/__virtual__/@react-leaflet-core-virtual-4991d9a5a9/0/cache/@react-leaflet-core-npm-2.1.0-de483ca53f-c11a15fb71.zip/node_modules/@react-leaflet/core/",\
           "packageDependencies": [\
-            ["@react-leaflet/core", "virtual:3998757a8258ce2c5e0e4e5db05b2e33abcba61f8052f75fd163accb6dcb942dafff601be0bcf09fc0137380a29be94097c57291ea5f2c1eff63c9b8ef4e588b#npm:2.1.0"],\
+            ["@react-leaflet/core", "virtual:59c5046a522f7355b5fb0a6a34b2f1df860698f99a239fce7f44522f4a51dce3527088cc48e2e63643269b74ab92ec060b45c0c3d9a0281d6256cf7549b2315a#npm:2.1.0"],\
             ["@types/leaflet", "npm:1.9.0"],\
             ["@types/react", "npm:18.0.25"],\
             ["@types/react-dom", "npm:18.0.9"],\
@@ -982,11 +1015,220 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["@turf/bbox", [\
+        ["npm:6.5.0", {\
+          "packageLocation": "./.yarn/cache/@turf-bbox-npm-6.5.0-7e0db31887-537be56ae0.zip/node_modules/@turf/bbox/",\
+          "packageDependencies": [\
+            ["@turf/bbox", "npm:6.5.0"],\
+            ["@turf/helpers", "npm:6.5.0"],\
+            ["@turf/meta", "npm:6.5.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@turf/bearing", [\
+        ["npm:6.5.0", {\
+          "packageLocation": "./.yarn/cache/@turf-bearing-npm-6.5.0-ebcc1b8fd8-f2883fb56d.zip/node_modules/@turf/bearing/",\
+          "packageDependencies": [\
+            ["@turf/bearing", "npm:6.5.0"],\
+            ["@turf/helpers", "npm:6.5.0"],\
+            ["@turf/invariant", "npm:6.5.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@turf/boolean-contains", [\
+        ["npm:6.5.0", {\
+          "packageLocation": "./.yarn/cache/@turf-boolean-contains-npm-6.5.0-f6a2989d38-85d062c298.zip/node_modules/@turf/boolean-contains/",\
+          "packageDependencies": [\
+            ["@turf/boolean-contains", "npm:6.5.0"],\
+            ["@turf/bbox", "npm:6.5.0"],\
+            ["@turf/boolean-point-in-polygon", "npm:6.5.0"],\
+            ["@turf/boolean-point-on-line", "npm:6.5.0"],\
+            ["@turf/helpers", "npm:6.5.0"],\
+            ["@turf/invariant", "npm:6.5.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@turf/boolean-point-in-polygon", [\
+        ["npm:6.5.0", {\
+          "packageLocation": "./.yarn/cache/@turf-boolean-point-in-polygon-npm-6.5.0-a1fdefa88c-624e54d995.zip/node_modules/@turf/boolean-point-in-polygon/",\
+          "packageDependencies": [\
+            ["@turf/boolean-point-in-polygon", "npm:6.5.0"],\
+            ["@turf/helpers", "npm:6.5.0"],\
+            ["@turf/invariant", "npm:6.5.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@turf/boolean-point-on-line", [\
+        ["npm:6.5.0", {\
+          "packageLocation": "./.yarn/cache/@turf-boolean-point-on-line-npm-6.5.0-978d803579-469bc39dfe.zip/node_modules/@turf/boolean-point-on-line/",\
+          "packageDependencies": [\
+            ["@turf/boolean-point-on-line", "npm:6.5.0"],\
+            ["@turf/helpers", "npm:6.5.0"],\
+            ["@turf/invariant", "npm:6.5.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@turf/destination", [\
+        ["npm:6.5.0", {\
+          "packageLocation": "./.yarn/cache/@turf-destination-npm-6.5.0-748ae1ba0c-eac68b89fb.zip/node_modules/@turf/destination/",\
+          "packageDependencies": [\
+            ["@turf/destination", "npm:6.5.0"],\
+            ["@turf/helpers", "npm:6.5.0"],\
+            ["@turf/invariant", "npm:6.5.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@turf/distance", [\
+        ["npm:6.5.0", {\
+          "packageLocation": "./.yarn/cache/@turf-distance-npm-6.5.0-31f0d31a23-f311e19a5d.zip/node_modules/@turf/distance/",\
+          "packageDependencies": [\
+            ["@turf/distance", "npm:6.5.0"],\
+            ["@turf/helpers", "npm:6.5.0"],\
+            ["@turf/invariant", "npm:6.5.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@turf/helpers", [\
+        ["npm:6.5.0", {\
+          "packageLocation": "./.yarn/cache/@turf-helpers-npm-6.5.0-a40ad42565-d57f746351.zip/node_modules/@turf/helpers/",\
+          "packageDependencies": [\
+            ["@turf/helpers", "npm:6.5.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@turf/invariant", [\
+        ["npm:6.5.0", {\
+          "packageLocation": "./.yarn/cache/@turf-invariant-npm-6.5.0-63bdebfa9a-f45109ee41.zip/node_modules/@turf/invariant/",\
+          "packageDependencies": [\
+            ["@turf/invariant", "npm:6.5.0"],\
+            ["@turf/helpers", "npm:6.5.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@turf/kinks", [\
+        ["npm:6.5.0", {\
+          "packageLocation": "./.yarn/cache/@turf-kinks-npm-6.5.0-336f45cc90-9393991891.zip/node_modules/@turf/kinks/",\
+          "packageDependencies": [\
+            ["@turf/kinks", "npm:6.5.0"],\
+            ["@turf/helpers", "npm:6.5.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@turf/line-intersect", [\
+        ["npm:6.5.0", {\
+          "packageLocation": "./.yarn/cache/@turf-line-intersect-npm-6.5.0-7b76bbb820-ae5eb762d8.zip/node_modules/@turf/line-intersect/",\
+          "packageDependencies": [\
+            ["@turf/line-intersect", "npm:6.5.0"],\
+            ["@turf/helpers", "npm:6.5.0"],\
+            ["@turf/invariant", "npm:6.5.0"],\
+            ["@turf/line-segment", "npm:6.5.0"],\
+            ["@turf/meta", "npm:6.5.0"],\
+            ["geojson-rbush", "npm:3.2.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@turf/line-segment", [\
+        ["npm:6.5.0", {\
+          "packageLocation": "./.yarn/cache/@turf-line-segment-npm-6.5.0-239e24ade0-c58c91066f.zip/node_modules/@turf/line-segment/",\
+          "packageDependencies": [\
+            ["@turf/line-segment", "npm:6.5.0"],\
+            ["@turf/helpers", "npm:6.5.0"],\
+            ["@turf/invariant", "npm:6.5.0"],\
+            ["@turf/meta", "npm:6.5.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@turf/line-split", [\
+        ["npm:6.5.0", {\
+          "packageLocation": "./.yarn/cache/@turf-line-split-npm-6.5.0-ddc165f3b6-cae22b5121.zip/node_modules/@turf/line-split/",\
+          "packageDependencies": [\
+            ["@turf/line-split", "npm:6.5.0"],\
+            ["@turf/bbox", "npm:6.5.0"],\
+            ["@turf/helpers", "npm:6.5.0"],\
+            ["@turf/invariant", "npm:6.5.0"],\
+            ["@turf/line-intersect", "npm:6.5.0"],\
+            ["@turf/line-segment", "npm:6.5.0"],\
+            ["@turf/meta", "npm:6.5.0"],\
+            ["@turf/nearest-point-on-line", "npm:6.5.0"],\
+            ["@turf/square", "npm:6.5.0"],\
+            ["@turf/truncate", "npm:6.5.0"],\
+            ["geojson-rbush", "npm:3.2.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@turf/meta", [\
+        ["npm:6.5.0", {\
+          "packageLocation": "./.yarn/cache/@turf-meta-npm-6.5.0-66a9378eac-c6bb936aa9.zip/node_modules/@turf/meta/",\
+          "packageDependencies": [\
+            ["@turf/meta", "npm:6.5.0"],\
+            ["@turf/helpers", "npm:6.5.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@turf/nearest-point-on-line", [\
+        ["npm:6.5.0", {\
+          "packageLocation": "./.yarn/cache/@turf-nearest-point-on-line-npm-6.5.0-eaa67a26e0-5d059e43e6.zip/node_modules/@turf/nearest-point-on-line/",\
+          "packageDependencies": [\
+            ["@turf/nearest-point-on-line", "npm:6.5.0"],\
+            ["@turf/bearing", "npm:6.5.0"],\
+            ["@turf/destination", "npm:6.5.0"],\
+            ["@turf/distance", "npm:6.5.0"],\
+            ["@turf/helpers", "npm:6.5.0"],\
+            ["@turf/invariant", "npm:6.5.0"],\
+            ["@turf/line-intersect", "npm:6.5.0"],\
+            ["@turf/meta", "npm:6.5.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@turf/square", [\
+        ["npm:6.5.0", {\
+          "packageLocation": "./.yarn/cache/@turf-square-npm-6.5.0-a2c4ee3c8e-db0525ac08.zip/node_modules/@turf/square/",\
+          "packageDependencies": [\
+            ["@turf/square", "npm:6.5.0"],\
+            ["@turf/distance", "npm:6.5.0"],\
+            ["@turf/helpers", "npm:6.5.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@turf/truncate", [\
+        ["npm:6.5.0", {\
+          "packageLocation": "./.yarn/cache/@turf-truncate-npm-6.5.0-de74b0dd15-554b5d6ed1.zip/node_modules/@turf/truncate/",\
+          "packageDependencies": [\
+            ["@turf/truncate", "npm:6.5.0"],\
+            ["@turf/helpers", "npm:6.5.0"],\
+            ["@turf/meta", "npm:6.5.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["@types/geojson", [\
         ["npm:7946.0.10", {\
           "packageLocation": "./.yarn/cache/@types-geojson-npm-7946.0.10-deca8d1263-12c407c2dc.zip/node_modules/@types/geojson/",\
           "packageDependencies": [\
             ["@types/geojson", "npm:7946.0.10"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:7946.0.8", {\
+          "packageLocation": "./.yarn/cache/@types-geojson-npm-7946.0.8-df9187edab-6049a39b02.zip/node_modules/@types/geojson/",\
+          "packageDependencies": [\
+            ["@types/geojson", "npm:7946.0.8"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -2711,6 +2953,20 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["geojson-rbush", [\
+        ["npm:3.2.0", {\
+          "packageLocation": "./.yarn/cache/geojson-rbush-npm-3.2.0-33df663f10-f373e646f3.zip/node_modules/geojson-rbush/",\
+          "packageDependencies": [\
+            ["geojson-rbush", "npm:3.2.0"],\
+            ["@turf/bbox", "npm:6.5.0"],\
+            ["@turf/helpers", "npm:6.5.0"],\
+            ["@turf/meta", "npm:6.5.0"],\
+            ["@types/geojson", "npm:7946.0.8"],\
+            ["rbush", "npm:3.0.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["get-intrinsic", [\
         ["npm:1.1.3", {\
           "packageLocation": "./.yarn/cache/get-intrinsic-npm-1.1.3-b6c7bd1010-152d79e872.zip/node_modules/get-intrinsic/",\
@@ -3439,6 +3695,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["leaflet-draw", [\
+        ["npm:1.0.4", {\
+          "packageLocation": "./.yarn/cache/leaflet-draw-npm-1.0.4-0ca0ebcf65-57a424e01a.zip/node_modules/leaflet-draw/",\
+          "packageDependencies": [\
+            ["leaflet-draw", "npm:1.0.4"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["levn", [\
         ["npm:0.4.1", {\
           "packageLocation": "./.yarn/cache/levn-npm-0.4.1-d183b2d7bb-12c5021c85.zip/node_modules/levn/",\
@@ -3477,6 +3742,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["locate-path", "npm:6.0.0"],\
             ["p-locate", "npm:5.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["lodash", [\
+        ["npm:4.17.21", {\
+          "packageLocation": "./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/",\
+          "packageDependencies": [\
+            ["lodash", "npm:4.17.21"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["lodash-es", [\
+        ["npm:4.17.21", {\
+          "packageLocation": "./.yarn/cache/lodash-es-npm-4.17.21-b45832dfce-05cbffad6e.zip/node_modules/lodash-es/",\
+          "packageDependencies": [\
+            ["lodash-es", "npm:4.17.21"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -3550,8 +3833,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@emotion/react", "virtual:59c5046a522f7355b5fb0a6a34b2f1df860698f99a239fce7f44522f4a51dce3527088cc48e2e63643269b74ab92ec060b45c0c3d9a0281d6256cf7549b2315a#npm:11.10.5"],\
             ["@emotion/styled", "virtual:59c5046a522f7355b5fb0a6a34b2f1df860698f99a239fce7f44522f4a51dce3527088cc48e2e63643269b74ab92ec060b45c0c3d9a0281d6256cf7549b2315a#npm:11.10.5"],\
             ["@fontsource/roboto", "npm:4.5.8"],\
+            ["@geoman-io/leaflet-geoman-free", "virtual:59c5046a522f7355b5fb0a6a34b2f1df860698f99a239fce7f44522f4a51dce3527088cc48e2e63643269b74ab92ec060b45c0c3d9a0281d6256cf7549b2315a#npm:2.13.1"],\
             ["@mui/icons-material", "virtual:59c5046a522f7355b5fb0a6a34b2f1df860698f99a239fce7f44522f4a51dce3527088cc48e2e63643269b74ab92ec060b45c0c3d9a0281d6256cf7549b2315a#npm:5.10.14"],\
             ["@mui/material", "virtual:59c5046a522f7355b5fb0a6a34b2f1df860698f99a239fce7f44522f4a51dce3527088cc48e2e63643269b74ab92ec060b45c0c3d9a0281d6256cf7549b2315a#npm:5.10.14"],\
+            ["@react-leaflet/core", "virtual:59c5046a522f7355b5fb0a6a34b2f1df860698f99a239fce7f44522f4a51dce3527088cc48e2e63643269b74ab92ec060b45c0c3d9a0281d6256cf7549b2315a#npm:2.1.0"],\
             ["@types/leaflet", "npm:1.9.0"],\
             ["@types/node", "npm:18.11.9"],\
             ["@types/react", "npm:18.0.25"],\
@@ -3560,10 +3845,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-config-next", "virtual:59c5046a522f7355b5fb0a6a34b2f1df860698f99a239fce7f44522f4a51dce3527088cc48e2e63643269b74ab92ec060b45c0c3d9a0281d6256cf7549b2315a#npm:13.0.4"],\
             ["file-loader", "virtual:59c5046a522f7355b5fb0a6a34b2f1df860698f99a239fce7f44522f4a51dce3527088cc48e2e63643269b74ab92ec060b45c0c3d9a0281d6256cf7549b2315a#npm:6.2.0"],\
             ["leaflet", "npm:1.9.3"],\
+            ["leaflet-draw", "npm:1.0.4"],\
             ["next", "virtual:59c5046a522f7355b5fb0a6a34b2f1df860698f99a239fce7f44522f4a51dce3527088cc48e2e63643269b74ab92ec060b45c0c3d9a0281d6256cf7549b2315a#npm:13.0.4"],\
+            ["prop-types", "npm:15.8.1"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:59c5046a522f7355b5fb0a6a34b2f1df860698f99a239fce7f44522f4a51dce3527088cc48e2e63643269b74ab92ec060b45c0c3d9a0281d6256cf7549b2315a#npm:18.2.0"],\
             ["react-leaflet", "virtual:59c5046a522f7355b5fb0a6a34b2f1df860698f99a239fce7f44522f4a51dce3527088cc48e2e63643269b74ab92ec060b45c0c3d9a0281d6256cf7549b2315a#npm:4.1.0"],\
+            ["react-leaflet-draw", "virtual:59c5046a522f7355b5fb0a6a34b2f1df860698f99a239fce7f44522f4a51dce3527088cc48e2e63643269b74ab92ec060b45c0c3d9a0281d6256cf7549b2315a#npm:0.20.4"],\
             ["react-no-ssr", "virtual:59c5046a522f7355b5fb0a6a34b2f1df860698f99a239fce7f44522f4a51dce3527088cc48e2e63643269b74ab92ec060b45c0c3d9a0281d6256cf7549b2315a#npm:1.1.0"],\
             ["sass", "npm:1.56.1"],\
             ["typescript", "patch:typescript@npm%3A4.9.3#~builtin<compat/typescript>::version=4.9.3&hash=d73830"]\
@@ -4099,6 +4387,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["polygon-clipping", [\
+        ["npm:0.15.3", {\
+          "packageLocation": "./.yarn/cache/polygon-clipping-npm-0.15.3-622c1deae4-ccf8804429.zip/node_modules/polygon-clipping/",\
+          "packageDependencies": [\
+            ["polygon-clipping", "npm:0.15.3"],\
+            ["splaytree", "npm:3.1.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["postcss", [\
         ["npm:8.4.14", {\
           "packageLocation": "./.yarn/cache/postcss-npm-8.4.14-c0d448b728-fe58766ff3.zip/node_modules/postcss/",\
@@ -4183,6 +4481,25 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["quickselect", [\
+        ["npm:2.0.0", {\
+          "packageLocation": "./.yarn/cache/quickselect-npm-2.0.0-620eb59fdc-ed2e784310.zip/node_modules/quickselect/",\
+          "packageDependencies": [\
+            ["quickselect", "npm:2.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["rbush", [\
+        ["npm:3.0.1", {\
+          "packageLocation": "./.yarn/cache/rbush-npm-3.0.1-9fc2a71778-b7def5ba76.zip/node_modules/rbush/",\
+          "packageDependencies": [\
+            ["rbush", "npm:3.0.1"],\
+            ["quickselect", "npm:2.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["react", [\
         ["npm:18.2.0", {\
           "packageLocation": "./.yarn/cache/react-npm-18.2.0-1eae08fee2-88e38092da.zip/node_modules/react/",\
@@ -4245,7 +4562,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/react-leaflet-virtual-3998757a82/0/cache/react-leaflet-npm-4.1.0-43f317f9ee-e49b00b5b0.zip/node_modules/react-leaflet/",\
           "packageDependencies": [\
             ["react-leaflet", "virtual:59c5046a522f7355b5fb0a6a34b2f1df860698f99a239fce7f44522f4a51dce3527088cc48e2e63643269b74ab92ec060b45c0c3d9a0281d6256cf7549b2315a#npm:4.1.0"],\
-            ["@react-leaflet/core", "virtual:3998757a8258ce2c5e0e4e5db05b2e33abcba61f8052f75fd163accb6dcb942dafff601be0bcf09fc0137380a29be94097c57291ea5f2c1eff63c9b8ef4e588b#npm:2.1.0"],\
+            ["@react-leaflet/core", "virtual:59c5046a522f7355b5fb0a6a34b2f1df860698f99a239fce7f44522f4a51dce3527088cc48e2e63643269b74ab92ec060b45c0c3d9a0281d6256cf7549b2315a#npm:2.1.0"],\
             ["@types/leaflet", "npm:1.9.0"],\
             ["@types/react", "npm:18.0.25"],\
             ["@types/react-dom", "npm:18.0.9"],\
@@ -4259,6 +4576,46 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             "@types/react",\
             "leaflet",\
             "react-dom",\
+            "react"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["react-leaflet-draw", [\
+        ["npm:0.20.4", {\
+          "packageLocation": "./.yarn/cache/react-leaflet-draw-npm-0.20.4-789cedbff9-76bafa1310.zip/node_modules/react-leaflet-draw/",\
+          "packageDependencies": [\
+            ["react-leaflet-draw", "npm:0.20.4"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:59c5046a522f7355b5fb0a6a34b2f1df860698f99a239fce7f44522f4a51dce3527088cc48e2e63643269b74ab92ec060b45c0c3d9a0281d6256cf7549b2315a#npm:0.20.4", {\
+          "packageLocation": "./.yarn/__virtual__/react-leaflet-draw-virtual-ac1185b6c0/0/cache/react-leaflet-draw-npm-0.20.4-789cedbff9-76bafa1310.zip/node_modules/react-leaflet-draw/",\
+          "packageDependencies": [\
+            ["react-leaflet-draw", "virtual:59c5046a522f7355b5fb0a6a34b2f1df860698f99a239fce7f44522f4a51dce3527088cc48e2e63643269b74ab92ec060b45c0c3d9a0281d6256cf7549b2315a#npm:0.20.4"],\
+            ["@types/leaflet", "npm:1.9.0"],\
+            ["@types/leaflet-draw", null],\
+            ["@types/prop-types", null],\
+            ["@types/react", "npm:18.0.25"],\
+            ["@types/react-leaflet", null],\
+            ["fast-deep-equal", "npm:3.1.3"],\
+            ["leaflet", "npm:1.9.3"],\
+            ["leaflet-draw", "npm:1.0.4"],\
+            ["lodash-es", "npm:4.17.21"],\
+            ["prop-types", "npm:15.8.1"],\
+            ["react", "npm:18.2.0"],\
+            ["react-leaflet", "virtual:59c5046a522f7355b5fb0a6a34b2f1df860698f99a239fce7f44522f4a51dce3527088cc48e2e63643269b74ab92ec060b45c0c3d9a0281d6256cf7549b2315a#npm:4.1.0"]\
+          ],\
+          "packagePeers": [\
+            "@types/leaflet-draw",\
+            "@types/leaflet",\
+            "@types/prop-types",\
+            "@types/react-leaflet",\
+            "@types/react",\
+            "leaflet-draw",\
+            "leaflet",\
+            "prop-types",\
+            "react-leaflet",\
             "react"\
           ],\
           "linkType": "HARD"\
@@ -4637,6 +4994,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/source-map-js-npm-1.0.2-ee4f9f9b30-c049a7fc4d.zip/node_modules/source-map-js/",\
           "packageDependencies": [\
             ["source-map-js", "npm:1.0.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["splaytree", [\
+        ["npm:3.1.1", {\
+          "packageLocation": "./.yarn/cache/splaytree-npm-3.1.1-3c31e4591b-8715161a73.zip/node_modules/splaytree/",\
+          "packageDependencies": [\
+            ["splaytree", "npm:3.1.1"]\
           ],\
           "linkType": "HARD"\
         }]\
