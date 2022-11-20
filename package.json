@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "CHOKIDAR_USEPOLLING=true next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -14,9 +14,11 @@
     "@types/react-dom": "18.0.9",
     "eslint": "8.27.0",
     "eslint-config-next": "13.0.4",
+    "leaflet": "^1.9.3",
     "next": "13.0.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-leaflet": "^4.1.0",
     "typescript": "4.9.3"
   },
   "packageManager": "yarn@3.3.0"
