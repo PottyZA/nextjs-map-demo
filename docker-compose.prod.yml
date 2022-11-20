@@ -1,4 +1,4 @@
-version: '3.9'
+version: '3'
 
 services:
   mappy:
@@ -7,8 +7,7 @@ services:
       context: .
       dockerfile: prod.Dockerfile
       args:
-#         ENV_VARIABLE: ${ENV_VARIABLE}
-#         NEXT_PUBLIC_ENV_VARIABLE: ${NEXT_PUBLIC_ENV_VARIABLE}
-        restart: always
-        ports:
-          3000:3000
+        NODE_ENV: ${NODE_ENV}
+    restart: always
+    ports:
+      - 3000:3000
