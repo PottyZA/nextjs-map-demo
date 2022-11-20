@@ -15,6 +15,7 @@ import ListItemIcon from '@mui/material/ListItemIcon'
 import ListItemText from '@mui/material/ListItemText'
 
 //Icons
+import MapIcon from '@mui/icons-material/Map';
 import FileUploadIcon from '@mui/icons-material/FileUpload';
 import FileDownloadIcon from '@mui/icons-material/FileDownload';
 
@@ -46,7 +47,8 @@ export default function Home() {
         anchor="left"
       >
         <Toolbar>
-          <Typography variant="h6" noWrap component="div">
+          <MapIcon />
+          <Typography variant="h6" noWrap component="div" className={styles.branding}>
             Mappy
           </Typography>
         </Toolbar>
