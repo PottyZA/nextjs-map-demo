@@ -29,7 +29,7 @@ export default function Home() {
       >
         <Toolbar>
           <Typography variant="h6" noWrap component="div">
-            Permanent drawer
+            Mappy
           </Typography>
         </Toolbar>
       </AppBar>
@@ -48,7 +48,7 @@ export default function Home() {
         <Toolbar/>
         <Divider/>
         <List>
-          {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+          {['Import GeoJSON', 'Export map as GeoJSON'].map((text, index) => (
             <ListItem key={text} disablePadding>
               <ListItemButton>
                 <ListItemIcon>
@@ -60,18 +60,6 @@ export default function Home() {
           ))}
         </List>
         <Divider/>
-        <List>
-          {['All mail', 'Trash', 'Spam'].map((text, index) => (
-            <ListItem key={text} disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  ICON
-                </ListItemIcon>
-                <ListItemText primary={text}/>
-              </ListItemButton>
-            </ListItem>
-          ))}
-        </List>
       </Drawer>
       <Box
         component="main"
@@ -92,6 +80,7 @@ export default function Home() {
         <div className={styles.homeMap}>
           <Map />
         </div>
+        <Footer />
       </Box>
     </Box>
   )
