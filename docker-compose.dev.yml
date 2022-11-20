@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  mappy:
+    container_name: mappy
+    build:
+      context: .
+      dockerfile: dev.Dockerfile
+    environment:
+      ENV_VARIABLE: .env  
+    volumes:
+      - .:/app
+      - ./public:/app/public
+    restart: always
+    ports:
+      - 3000:3000
