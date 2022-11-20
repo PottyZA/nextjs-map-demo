@@ -1,4 +1,4 @@
-import styles from './Footer.module.css'
+import styles from './Footer.module.scss'
 import Image from 'next/image'
 
 const Footer = () => {
@@ -11,7 +11,7 @@ const Footer = () => {
       >
         Powered by {' '}
         <span className={styles.logo}>
-        <Image src="/public/vercel.svg" alt="Vercel Logo" width={72} height={16}/>
+        <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16}/>
       </span>
       </a>
     </footer>)
