@@ -1,4 +1,5 @@
-import styles from 'Footer.module.css'
+import styles from './Footer.module.css'
+import Image from 'next/image'
 
 const Footer = () => {
   return (
@@ -8,9 +9,9 @@ const Footer = () => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        Powered by{' '}
+        Powered by {' '}
         <span className={styles.logo}>
-        <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16}/>
+        <Image src="/public/vercel.svg" alt="Vercel Logo" width={72} height={16}/>
       </span>
       </a>
     </footer>)
