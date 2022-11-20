@@ -5,7 +5,7 @@ services:
     container_name: mappy
     build:
       context: .
-      dockerfile: prod.Dockerfile      
+      dockerfile: prod.Dockerfile
     restart: always
     ports:
       - 3000:3000

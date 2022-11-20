@@ -6,8 +6,6 @@ services:
     build:
       context: .
       dockerfile: dev.Dockerfile
-    environment:
-      ENV_VARIABLE: .env  
     volumes:
       - .:/app
       - ./public:/app/public
