@@ -21,6 +21,8 @@ docker compose -f docker-compose.prod.yml up --build
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+Sample GeoJSON files have been provided in the `/samples` directory.
+
 ## Key packages and libaries used
 - [Next.js](https://nextjs.org/docs) - Next.js is a web development framework based on React. Here it's configured to use TypeScript.
 - [Leaflet](https://leafletjs.com/) - a JavaScript mapping library.
