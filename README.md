@@ -19,7 +19,10 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Screenshots
 ![Main Screen](/readme-resources/main_screen.png)
+The main screen of the application, prior to importing anything
 
 ![Imported Cape Town GeoJSON](/readme-resources/imported_ct.png)
+The app after importing a sample GeoJSON file containing a polygon of Cape Town
 
 ![Imported sample GeoJSON](/readme-resources/imported_sample.png)
+The app after importing a sample GeoJSON file containing more complex data
