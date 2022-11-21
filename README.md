@@ -1,3 +1,13 @@
+## Description
+This demo application uses Next.js with TypeScript to implement GeoJSON file handling and viewing in React. Leaflet is used to render the map and handling polygon drawing logic. 
+
+## Main Features
+The application has the following main features:
+- Import and view existing GeoJSON files
+- Edit GeoJSON based polygon layers on the map
+- Create new geospatial objects on the map
+- Export edited imported GeoJSON layers, along with any newly created objects
+
 ## Getting Started
 Run the development server using docker:
 ```bash
