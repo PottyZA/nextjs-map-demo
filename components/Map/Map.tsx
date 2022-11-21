@@ -18,17 +18,24 @@ import shadowUrl from 'leaflet/dist/images/marker-shadow.png';
 
 const {MapContainer} = ReactLeaflet;
 
-type MapProps = {
-  children: JSX.Element
-  className: String
-}
-
 //Geoman provides advanced editing capabilities (needed for MultiPolygons)
-const EditingControls = ({onUpdateGeoJson}) => {
+const EditingControls = ({ geoJson, onUpdateGeoJson }) => {
   const context = useLeafletContext();
 
   useEffect(() => {
     const leafletContainer = context.layerContainer || context.map;
+
+    // Helper function to fetch all layers from Geoman leaflet instance
+    const generateUpdatedGeoJsonLayerArray = () => {
+      // Get all existing layers
+      let allLayers = leafletContainer.pm.getGeomanLayers()
+      let geoJsonArray = []
+      allLayers.map((layer) => {
+        let geojson = layer.toGeoJSON()
+        geoJsonArray.push(geojson)
+      })
+      return geoJsonArray
+    }
 
     leafletContainer.pm.addControls({
       drawMarker: false
@@ -37,42 +44,23 @@ const EditingControls = ({onUpdateGeoJson}) => {
     leafletContainer.pm.setGlobalOptions({pmIgnore: false});
 
     leafletContainer.on("pm:create", (e) => {
-      console.log(e)
       if (e.layer && e.layer.pm) {
-        const shape = e;
-
-        // enable editing of shape
-        shape.layer.pm.enable();
-
-        console.log(`object created: ${shape.layer.pm.getShape()}`);
-        // console.log(leafletContainer.pm.getGeomanLayers(true).toGeoJSON());
-        leafletContainer.pm
-          .getGeomanLayers(true)
-          .bindPopup("i am whole")
-          .openPopup();
-
-        leafletContainer.pm
-          .getGeomanLayers()
-          .map((layer, index) => layer.bindPopup(`I am figure N° ${index}`));
+        let geoJsonArray = generateUpdatedGeoJsonLayerArray()
+        onUpdateGeoJson(geoJsonArray)
       }
     });
 
     leafletContainer.on("pm:globaleditmodetoggled", (e) => {
       // Only update GeoJSON objects if edit mode was toggled from enabled to disabled, mirroring clicking "Finish"
       if (!e.enabled) {
-        let layers = leafletContainer.pm.getGeomanLayers()
-        let geoJsonArray = []
-        layers.map((layer) => {
-          let geojson = layer.toGeoJSON()
-          geoJsonArray.push(geojson)
-        })
+        let geoJsonArray = generateUpdatedGeoJsonLayerArray()
         onUpdateGeoJson(geoJsonArray)
       }
     })
 
     leafletContainer.on("pm:remove", (e) => {
-      console.log("object removed");
-      // console.log(leafletContainer.pm.getGeomanLayers(true).toGeoJSON());
+      // Set to empty, since we've cleared all layers now
+      onUpdateGeoJson([])
     });
 
     return () => {
@@ -81,9 +69,25 @@ const EditingControls = ({onUpdateGeoJson}) => {
     };
   }, [context]);
 
+  useEffect(() => {
+    // Center on new GeoJSON object
+    const leafletContainer = context.layerContainer || context.map;
+    let latestGeoJson = geoJson[geoJson.length-1]
+
+    // Only try to get bounds if there are any
+    if (latestGeoJson) {
+      let feature = L.geoJSON(latestGeoJson)
+      leafletContainer.fitBounds(feature.getBounds())
+    }
+  }, [geoJson])
+
   return null;
 };
 
+type MapProps = {
+  children: JSX.Element
+  className: String
+}
 
 const Map: FC<MapProps> = ({children, className, geojsonObjects, onUpdateGeojson, ...rest}) => {
   const DEFAULT_CENTER = [-33.918861, 18.423300]
@@ -115,7 +119,7 @@ const Map: FC<MapProps> = ({children, className, geojsonObjects, onUpdateGeojson
       {geojsonObjects.map((geojson, index) => {
         return geojson ? <ReactLeaflet.GeoJSON key={index} data={geojson}/> : null
       })}
-      <EditingControls onUpdateGeoJson={onUpdateGeojson}/>
+      <EditingControls geoJson={geojsonObjects} onUpdateGeoJson={onUpdateGeojson}/>
     </MapContainer>
   )
 }
