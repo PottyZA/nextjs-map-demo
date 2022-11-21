@@ -10,11 +10,11 @@ import DialogTitle from '@mui/material/DialogTitle';
 
 type Props = {
   open: boolean,
-  saveFileContents: Function,
-  handleClose: React.Dispatch<React.SetStateAction<boolean>>
+  saveFileContents: (data: object) => void,
+  handleClose: () => void
 }
 
-const DialogComponent: FC<Props> = ({open, saveFileContents, handleClose}) => {
+const DialogComponent: FC<Props> = ({open, saveFileContents, handleClose }) => {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
 
   const fileHandler = (changeEvent: React.ChangeEvent<HTMLInputElement>) => {
@@ -32,7 +32,7 @@ const DialogComponent: FC<Props> = ({open, saveFileContents, handleClose}) => {
 
     fileReader.onload = function() {
       let result = fileReader.result
-      let data = ""
+      let data = {}
       if (result && typeof result === "string") {
         data = JSON.parse(result)
       }

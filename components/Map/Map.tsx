@@ -1,10 +1,12 @@
+// @ts-nocheck
+// TS Nocheck above is to workaround .pm. function from Leaflet-Geoman not including TS bindings
+
 import { useEffect, FC } from 'react';
 import L from 'leaflet';
 import * as ReactLeaflet from 'react-leaflet';
 import { useLeafletContext } from "@react-leaflet/core";
 
 import 'leaflet/dist/leaflet.css';
-import 'leaflet-draw/dist/leaflet.draw.css'
 
 // Advanced editing controls
 import '@geoman-io/leaflet-geoman-free';
@@ -21,6 +23,7 @@ const {MapContainer} = ReactLeaflet;
 //Geoman provides advanced editing capabilities (needed for MultiPolygons)
 const EditingControls = ({ geoJson, onUpdateGeoJson }) => {
   const context = useLeafletContext();
+
 
   useEffect(() => {
     const leafletContainer = context.layerContainer || context.map;
@@ -85,8 +88,10 @@ const EditingControls = ({ geoJson, onUpdateGeoJson }) => {
 };
 
 type MapProps = {
-  children: JSX.Element
-  className: String
+  children?: JSX.Element,
+  className?: String,
+  geojsonObjects: Array<object>,
+  onUpdateGeojson: (data: Array<object | null>) => void
 }
 
 const Map: FC<MapProps> = ({children, className, geojsonObjects, onUpdateGeojson, ...rest}) => {

@@ -49,7 +49,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:59c5046a522f7355b5fb0a6a34b2f1df860698f99a239fce7f44522f4a51dce3527088cc48e2e63643269b74ab92ec060b45c0c3d9a0281d6256cf7549b2315a#npm:18.2.0"],\
             ["react-leaflet", "virtual:59c5046a522f7355b5fb0a6a34b2f1df860698f99a239fce7f44522f4a51dce3527088cc48e2e63643269b74ab92ec060b45c0c3d9a0281d6256cf7549b2315a#npm:4.1.0"],\
-            ["react-leaflet-draw", "virtual:59c5046a522f7355b5fb0a6a34b2f1df860698f99a239fce7f44522f4a51dce3527088cc48e2e63643269b74ab92ec060b45c0c3d9a0281d6256cf7549b2315a#npm:0.20.4"],\
             ["react-no-ssr", "virtual:59c5046a522f7355b5fb0a6a34b2f1df860698f99a239fce7f44522f4a51dce3527088cc48e2e63643269b74ab92ec060b45c0c3d9a0281d6256cf7549b2315a#npm:1.1.0"],\
             ["sass", "npm:1.56.1"],\
             ["typescript", "patch:typescript@npm%3A4.9.3#~builtin<compat/typescript>::version=4.9.3&hash=d73830"]\
@@ -3755,15 +3754,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
-      ["lodash-es", [\
-        ["npm:4.17.21", {\
-          "packageLocation": "./.yarn/cache/lodash-es-npm-4.17.21-b45832dfce-05cbffad6e.zip/node_modules/lodash-es/",\
-          "packageDependencies": [\
-            ["lodash-es", "npm:4.17.21"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
       ["lodash.merge", [\
         ["npm:4.6.2", {\
           "packageLocation": "./.yarn/cache/lodash.merge-npm-4.6.2-77cb4416bf-ad580b4bdb.zip/node_modules/lodash.merge/",\
@@ -3851,7 +3841,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:59c5046a522f7355b5fb0a6a34b2f1df860698f99a239fce7f44522f4a51dce3527088cc48e2e63643269b74ab92ec060b45c0c3d9a0281d6256cf7549b2315a#npm:18.2.0"],\
             ["react-leaflet", "virtual:59c5046a522f7355b5fb0a6a34b2f1df860698f99a239fce7f44522f4a51dce3527088cc48e2e63643269b74ab92ec060b45c0c3d9a0281d6256cf7549b2315a#npm:4.1.0"],\
-            ["react-leaflet-draw", "virtual:59c5046a522f7355b5fb0a6a34b2f1df860698f99a239fce7f44522f4a51dce3527088cc48e2e63643269b74ab92ec060b45c0c3d9a0281d6256cf7549b2315a#npm:0.20.4"],\
             ["react-no-ssr", "virtual:59c5046a522f7355b5fb0a6a34b2f1df860698f99a239fce7f44522f4a51dce3527088cc48e2e63643269b74ab92ec060b45c0c3d9a0281d6256cf7549b2315a#npm:1.1.0"],\
             ["sass", "npm:1.56.1"],\
             ["typescript", "patch:typescript@npm%3A4.9.3#~builtin<compat/typescript>::version=4.9.3&hash=d73830"]\
@@ -4576,46 +4565,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             "@types/react",\
             "leaflet",\
             "react-dom",\
-            "react"\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["react-leaflet-draw", [\
-        ["npm:0.20.4", {\
-          "packageLocation": "./.yarn/cache/react-leaflet-draw-npm-0.20.4-789cedbff9-76bafa1310.zip/node_modules/react-leaflet-draw/",\
-          "packageDependencies": [\
-            ["react-leaflet-draw", "npm:0.20.4"]\
-          ],\
-          "linkType": "SOFT"\
-        }],\
-        ["virtual:59c5046a522f7355b5fb0a6a34b2f1df860698f99a239fce7f44522f4a51dce3527088cc48e2e63643269b74ab92ec060b45c0c3d9a0281d6256cf7549b2315a#npm:0.20.4", {\
-          "packageLocation": "./.yarn/__virtual__/react-leaflet-draw-virtual-ac1185b6c0/0/cache/react-leaflet-draw-npm-0.20.4-789cedbff9-76bafa1310.zip/node_modules/react-leaflet-draw/",\
-          "packageDependencies": [\
-            ["react-leaflet-draw", "virtual:59c5046a522f7355b5fb0a6a34b2f1df860698f99a239fce7f44522f4a51dce3527088cc48e2e63643269b74ab92ec060b45c0c3d9a0281d6256cf7549b2315a#npm:0.20.4"],\
-            ["@types/leaflet", "npm:1.9.0"],\
-            ["@types/leaflet-draw", null],\
-            ["@types/prop-types", null],\
-            ["@types/react", "npm:18.0.25"],\
-            ["@types/react-leaflet", null],\
-            ["fast-deep-equal", "npm:3.1.3"],\
-            ["leaflet", "npm:1.9.3"],\
-            ["leaflet-draw", "npm:1.0.4"],\
-            ["lodash-es", "npm:4.17.21"],\
-            ["prop-types", "npm:15.8.1"],\
-            ["react", "npm:18.2.0"],\
-            ["react-leaflet", "virtual:59c5046a522f7355b5fb0a6a34b2f1df860698f99a239fce7f44522f4a51dce3527088cc48e2e63643269b74ab92ec060b45c0c3d9a0281d6256cf7549b2315a#npm:4.1.0"]\
-          ],\
-          "packagePeers": [\
-            "@types/leaflet-draw",\
-            "@types/leaflet",\
-            "@types/prop-types",\
-            "@types/react-leaflet",\
-            "@types/react",\
-            "leaflet-draw",\
-            "leaflet",\
-            "prop-types",\
-            "react-leaflet",\
             "react"\
           ],\
           "linkType": "HARD"\

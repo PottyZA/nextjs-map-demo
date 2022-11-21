@@ -2,12 +2,14 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
-
+Run the development server using docker:
 ```bash
-npm run dev
-# or
-yarn dev
+docker compose docker-compose.dev.yml up --build
+```
+
+You may also run the application in production mode using the following snippet:
+```bash
+docker compose docker-compose.prod.yml up --build
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
