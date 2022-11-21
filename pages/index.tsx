@@ -31,9 +31,10 @@ const drawerWidth = 240
 
 export default function Home() {
   const [importModalOpen, setImportModalOpen] = useState(false)
+  const [uploadedGeoJson, setUploadedGeoJson] = useState([])
 
   const saveFileContents = (data) => {
-    console.log("save data into state", data)
+    setUploadedGeoJson(current => [...current, data])
   }
 
   return (
@@ -102,7 +103,7 @@ export default function Home() {
         <Toolbar/>
         <Dialog open={importModalOpen} saveFileContents={saveFileContents} handleClose={() => setImportModalOpen(false)} />
         <div className={styles.homeMap}>
-          <Map />
+          <Map geojsonObjects={uploadedGeoJson} />
         </div>
         <Footer />
       </Box>

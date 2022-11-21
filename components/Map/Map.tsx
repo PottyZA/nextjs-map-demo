@@ -18,8 +18,6 @@ import shadowUrl from 'leaflet/dist/images/marker-shadow.png';
 
 const {MapContainer} = ReactLeaflet;
 
-import sampleGeoJson from "../../samples/cape-town.geojson.txt"
-
 type MapProps = {
   children: JSX.Element
   className: String
@@ -93,9 +91,6 @@ const Map: FC<MapProps> = ({children, className, geojsonObjects, ...rest}) => {
     mapClassName = `${mapClassName} ${className}`;
   }
 
-  // TODO: remove sample
-  const json = JSON.parse(sampleGeoJson)
-
   useEffect(() => {
     (async function init() {
       delete L.Icon.Default.prototype._getIconUrl;
@@ -108,7 +103,6 @@ const Map: FC<MapProps> = ({children, className, geojsonObjects, ...rest}) => {
     })();
   }, []);
 
-  //  <ReactLeaflet.GeoJSON data={json}>
   return (
     <MapContainer className={mapClassName} center={DEFAULT_CENTER} zoom={12} minZoom={4}>
       <ReactLeaflet.TileLayer
@@ -116,7 +110,9 @@ const Map: FC<MapProps> = ({children, className, geojsonObjects, ...rest}) => {
         attribution="&copy; <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
         noWrap
       />
-      <ReactLeaflet.GeoJSON data={json} />
+      {geojsonObjects.map((geojson) => {
+        return <ReactLeaflet.GeoJSON data={geojson} />
+      })}
       <EditingControls />
     </MapContainer>
   )
