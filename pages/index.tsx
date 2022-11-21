@@ -1,6 +1,9 @@
 import Head from 'next/head'
+import { useState } from "react"
+
 import styles from '../styles/Home.module.scss'
 
+// Material UI component imports
 import Box from '@mui/material/Box'
 import Drawer from '@mui/material/Drawer'
 import CssBaseline from '@mui/material/CssBaseline'
@@ -14,17 +17,21 @@ import ListItemButton from '@mui/material/ListItemButton'
 import ListItemIcon from '@mui/material/ListItemIcon'
 import ListItemText from '@mui/material/ListItemText'
 
-//Icons
+// Icons
 import MapIcon from '@mui/icons-material/Map';
 import FileUploadIcon from '@mui/icons-material/FileUpload';
 import FileDownloadIcon from '@mui/icons-material/FileDownload';
 
+// Custom Component imports
 import Map from "../components/Map"
+import Dialog from "../components/Dialog"
 import Footer from '../components/Footer'
 
 const drawerWidth = 240
 
 export default function Home() {
+  const [importModalOpen, setImportModalOpen] = useState(false)
+
   return (
     <Box sx={{display: 'flex'}}>
       <CssBaseline/>
@@ -54,7 +61,7 @@ export default function Home() {
         </Toolbar>
         <Divider/>
         <List>
-          <ListItem key={"import"} disablePadding>
+          <ListItem key={"import"} disablePadding onClick={() => setImportModalOpen(true)}>
             <ListItemButton>
               <ListItemIcon>
                 <FileUploadIcon />
@@ -89,6 +96,7 @@ export default function Home() {
       }}
       >
         <Toolbar/>
+        <Dialog open={importModalOpen} handleClose={() => setImportModalOpen(false)} />
         <div className={styles.homeMap}>
           <Map />
         </div>
