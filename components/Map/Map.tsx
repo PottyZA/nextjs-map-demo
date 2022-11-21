@@ -1,7 +1,7 @@
-import {useEffect, useState, FC, useCallback} from 'react';
+import { useEffect, FC } from 'react';
 import L from 'leaflet';
 import * as ReactLeaflet from 'react-leaflet';
-import {useLeafletContext} from "@react-leaflet/core";
+import { useLeafletContext } from "@react-leaflet/core";
 
 import 'leaflet/dist/leaflet.css';
 import 'leaflet-draw/dist/leaflet.draw.css'
@@ -24,7 +24,7 @@ type MapProps = {
 }
 
 //Geoman provides advanced editing capabilities (needed for MultiPolygons)
-const EditingControls = ({ onUpdateGeoJson }) => {
+const EditingControls = ({onUpdateGeoJson}) => {
   const context = useLeafletContext();
 
   useEffect(() => {
@@ -64,10 +64,16 @@ const EditingControls = ({ onUpdateGeoJson }) => {
     });
 
     leafletContainer.on("pm:globaleditmodetoggled", (e) => {
-      let layers = leafletContainer.pm.getGeomanLayers(true)
-      let geoJson = layers.toGeoJSON()
-
-      onUpdateGeoJson([geoJson])
+      // Only update GeoJSON objects if edit mode was toggled from enabled to disabled, mirroring clicking "Finish"
+      if (!e.enabled) {
+        let layers = leafletContainer.pm.getGeomanLayers()
+        let geoJsonArray = []
+        layers.map((layer) => {
+          let geojson = layer.toGeoJSON()
+          geoJsonArray.push(geojson)
+        })
+        onUpdateGeoJson(geoJsonArray)
+      }
     })
 
     leafletContainer.on("pm:remove", (e) => {
@@ -113,9 +119,9 @@ const Map: FC<MapProps> = ({children, className, geojsonObjects, onUpdateGeojson
         noWrap
       />
       {geojsonObjects.map((geojson, index) => {
-        return <ReactLeaflet.GeoJSON key={index} data={geojson} />
+        return geojson ? <ReactLeaflet.GeoJSON key={index} data={geojson}/> : null
       })}
-      <EditingControls onUpdateGeoJson={(data) => onUpdateGeojson(data)} />
+      <EditingControls onUpdateGeoJson={onUpdateGeojson}/>
     </MapContainer>
   )
 }
