@@ -19,6 +19,8 @@ You may also run the application in production mode using the following snippet:
 docker compose -f docker-compose.prod.yml up --build
 ```
 
+Sample GeoJSON files have been provided in the `/samples` directory.
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## Key packages and libaries used
