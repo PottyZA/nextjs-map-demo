@@ -32,6 +32,10 @@ const drawerWidth = 240
 export default function Home() {
   const [importModalOpen, setImportModalOpen] = useState(false)
 
+  const saveFileContents = (data) => {
+    console.log("save data into state", data)
+  }
+
   return (
     <Box sx={{display: 'flex'}}>
       <CssBaseline/>
@@ -96,7 +100,7 @@ export default function Home() {
       }}
       >
         <Toolbar/>
-        <Dialog open={importModalOpen} handleClose={() => setImportModalOpen(false)} />
+        <Dialog open={importModalOpen} saveFileContents={saveFileContents} handleClose={() => setImportModalOpen(false)} />
         <div className={styles.homeMap}>
           <Map />
         </div>
