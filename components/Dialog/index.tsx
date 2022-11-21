@@ -26,8 +26,7 @@ const DialogComponent: FC<Props> = ({open, saveFileContents, handleClose }) => {
     if (file) {
       fileReader.readAsText(file)
     } else {
-      console.log("no file uploaded")
-      // TODO: Show error!
+      alert("You haven't uploaded anything!")
     }
 
     fileReader.onload = function() {
@@ -44,10 +43,6 @@ const DialogComponent: FC<Props> = ({open, saveFileContents, handleClose }) => {
       // Reset file state to allow fresh uploads
       setSelectedFile(null)
     }
-
-
-    // Close modal
-    handleClose()
   }
 
   return (
