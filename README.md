@@ -12,10 +12,14 @@ docker compose docker-compose.prod.yml up --build
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## Key packages and libaries used
-- [Next.js](https://nextjs.org/docs) - Next.js is a web development framework based on React.
+- [Next.js](https://nextjs.org/docs) - Next.js is a web development framework based on React. Here it's configured to use TypeScript.
 - [Leaflet](https://leafletjs.com/) - a JavaScript mapping library.
 - [React-Leaftlet](https://react-leaflet.js.org/) - React components for Leaflet Maps
 - [Leaflet-Geoman](https://github.com/geoman-io/leaflet-geoman) - Advanced editing capabilities for Leaflet maps (incl. MultiPolygon support)
+
+## Known Issues
+- The application performs poorly when enabling editing on more complex GeoJSON data layers. This could be improved by editing layer creation to generate a new layer per polygon within a GeoJSON file, as opposed to one layer per GeoJSON import.
+- The Leaflet-Geoman package doesn't include easily accessible TypeScript types, so the `Map.tsx` file includes a `// @ts-nocheck` to work around that limitation.
 
 ## Screenshots
 ![Main Screen](/readme-resources/main_screen.png)
