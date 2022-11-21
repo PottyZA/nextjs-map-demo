@@ -18,3 +18,8 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - [Leaflet-Geoman](https://github.com/geoman-io/leaflet-geoman) - Advanced editing capabilities for Leaflet maps (incl. MultiPolygon support)
 
 ## Screenshots
+![Main Screen](/readme-resources/main_screen.png)
+
+![Imported Cape Town GeoJSON](/readme-resources/imported_ct.png)
+
+![Imported sample GeoJSON](/readme-resources/imported_sample.png)
