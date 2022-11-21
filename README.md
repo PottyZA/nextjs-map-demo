@@ -26,6 +26,8 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - [Leaflet](https://leafletjs.com/) - a JavaScript mapping library.
 - [React-Leaftlet](https://react-leaflet.js.org/) - React components for Leaflet Maps
 - [Leaflet-Geoman](https://github.com/geoman-io/leaflet-geoman) - Advanced editing capabilities for Leaflet maps (incl. MultiPolygon support)
+- [Material UI](https://mui.com/) - Material design based UI components for fast iteration.
+- [Docker](https://www.docker.com/) - Containerisation of the application
 
 ## Known Issues
 - The application performs poorly when enabling editing on more complex GeoJSON data layers. This could be improved by editing layer creation to generate a new layer per polygon within a GeoJSON file, as opposed to one layer per GeoJSON import.
