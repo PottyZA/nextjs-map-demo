@@ -1,4 +1,4 @@
-import {useEffect, useState, FC} from 'react';
+import {useEffect, useState, FC, useCallback} from 'react';
 import L from 'leaflet';
 import * as ReactLeaflet from 'react-leaflet';
 import {useLeafletContext} from "@react-leaflet/core";
@@ -24,7 +24,7 @@ type MapProps = {
 }
 
 //Geoman provides advanced editing capabilities (needed for MultiPolygons)
-const EditingControls = () => {
+const EditingControls = ({ onUpdateGeoJson }) => {
   const context = useLeafletContext();
 
   useEffect(() => {
@@ -50,6 +50,7 @@ const EditingControls = () => {
           .getGeomanLayers(true)
           .bindPopup("i am whole")
           .openPopup();
+
         leafletContainer.pm
           .getGeomanLayers()
           .map((layer, index) => layer.bindPopup(`I am figure N° ${index}`));
@@ -62,10 +63,11 @@ const EditingControls = () => {
       }
     });
 
-    console.log(leafletContainer.pm.getGeomanLayers())
-
     leafletContainer.on("pm:globaleditmodetoggled", (e) => {
-      console.log(e)
+      let layers = leafletContainer.pm.getGeomanLayers(true)
+      let geoJson = layers.toGeoJSON()
+
+      onUpdateGeoJson([geoJson])
     })
 
     leafletContainer.on("pm:remove", (e) => {
@@ -83,7 +85,7 @@ const EditingControls = () => {
 };
 
 
-const Map: FC<MapProps> = ({children, className, geojsonObjects, ...rest}) => {
+const Map: FC<MapProps> = ({children, className, geojsonObjects, onUpdateGeojson, ...rest}) => {
   const DEFAULT_CENTER = [-33.918861, 18.423300]
 
   let mapClassName = styles.map;
@@ -110,10 +112,10 @@ const Map: FC<MapProps> = ({children, className, geojsonObjects, ...rest}) => {
         attribution="&copy; <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
         noWrap
       />
-      {geojsonObjects.map((geojson) => {
-        return <ReactLeaflet.GeoJSON data={geojson} />
+      {geojsonObjects.map((geojson, index) => {
+        return <ReactLeaflet.GeoJSON key={index} data={geojson} />
       })}
-      <EditingControls />
+      <EditingControls onUpdateGeoJson={(data) => onUpdateGeojson(data)} />
     </MapContainer>
   )
 }

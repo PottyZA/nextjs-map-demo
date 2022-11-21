@@ -37,6 +37,15 @@ export default function Home() {
     setUploadedGeoJson(current => [...current, data])
   }
 
+  const updateGeoJson = (data) => {
+    setUploadedGeoJson(data)
+  }
+
+  const exportGeoJson = () => {
+    // TODO: implement
+    console.log(uploadedGeoJson)
+  }
+
   return (
     <Box sx={{display: 'flex'}}>
       <CssBaseline/>
@@ -74,7 +83,7 @@ export default function Home() {
               <ListItemText primary={"Import GeoJSON"}/>
             </ListItemButton>
           </ListItem>
-          <ListItem key={"export"} disablePadding>
+          <ListItem key={"export"} disablePadding onClick={exportGeoJson}>
             <ListItemButton>
               <ListItemIcon>
                 <FileDownloadIcon />
@@ -103,7 +112,7 @@ export default function Home() {
         <Toolbar/>
         <Dialog open={importModalOpen} saveFileContents={saveFileContents} handleClose={() => setImportModalOpen(false)} />
         <div className={styles.homeMap}>
-          <Map geojsonObjects={uploadedGeoJson} />
+          <Map geojsonObjects={uploadedGeoJson} onUpdateGeojson={updateGeoJson} />
         </div>
         <Footer />
       </Box>
