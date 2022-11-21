@@ -56,6 +56,11 @@ export default function Home() {
 
   return (
     <Box sx={{display: 'flex'}}>
+      <Head>
+        <title>Mappy</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
+
       <CssBaseline/>
       <AppBar
         position="fixed"
