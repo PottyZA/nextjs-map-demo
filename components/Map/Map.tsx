@@ -54,12 +54,6 @@ const EditingControls = ({onUpdateGeoJson}) => {
         leafletContainer.pm
           .getGeomanLayers()
           .map((layer, index) => layer.bindPopup(`I am figure N° ${index}`));
-
-        shape.layer.on("pm:edit", (e) => {
-          const event = e;
-          console.log(e)
-          // console.log(leafletContainer.pm.getGeomanLayers(true).toGeoJSON());
-        });
       }
     });
 

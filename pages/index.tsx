@@ -42,8 +42,16 @@ export default function Home() {
   }
 
   const exportGeoJson = () => {
-    // TODO: implement
-    console.log(uploadedGeoJson)
+    // Encode as JSON
+    const jsonString = `data:text/json;chatset=utf-8,${encodeURIComponent(
+      JSON.stringify(uploadedGeoJson)
+    )}`
+
+    // Create temporary DOM element for downloading
+    const link = document.createElement("a")
+    link.href = jsonString
+    link.download = "data.geojson"
+    link.click()
   }
 
   return (
