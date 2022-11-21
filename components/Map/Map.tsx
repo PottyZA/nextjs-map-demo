@@ -26,7 +26,7 @@ type MapProps = {
 }
 
 //Geoman provides advanced editing capabilities (needed for MultiPolygons)
-const Geoman = () => {
+const EditingControls = () => {
   const context = useLeafletContext();
 
   useEffect(() => {
@@ -116,8 +116,8 @@ const Map: FC<MapProps> = ({children, className, geojsonObjects, ...rest}) => {
         attribution="&copy; <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
         noWrap
       />
-      <ReactLeaflet.GeoJSON data={json}/>
-      <Geoman/>
+      <ReactLeaflet.GeoJSON data={json} />
+      <EditingControls />
     </MapContainer>
   )
 }
