@@ -32,19 +32,25 @@ const EditingControls = ({ geoJson, onUpdateGeoJson }) => {
     const generateUpdatedGeoJsonLayerArray = () => {
       // Get all existing layers
       let allLayers = leafletContainer.pm.getGeomanLayers()
+
       let geoJsonArray = []
       allLayers.map((layer) => {
         let geojson = layer.toGeoJSON()
         geoJsonArray.push(geojson)
       })
-      return geoJsonArray
+
+      let featureCollection = geoJsonArray.length > 0 ? [{
+        "type": "FeatureCollection",
+        "features": geoJsonArray
+      }] : []
+      return featureCollection
     }
 
     leafletContainer.pm.addControls({
       drawMarker: false
     });
 
-    leafletContainer.pm.setGlobalOptions({pmIgnore: false});
+    leafletContainer.pm.setGlobalOptions( {pmIgnore: false, limitMarkersToCount: 5 });
 
     leafletContainer.on("pm:create", (e) => {
       if (e.layer && e.layer.pm) {
