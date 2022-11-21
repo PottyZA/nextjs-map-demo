@@ -32,7 +32,7 @@ Sample GeoJSON files have been provided in the `/samples` directory.
 - [Docker](https://www.docker.com/) - Containerisation of the application
 
 ## Known Issues
-- The application performs poorly when enabling editing on more complex GeoJSON data layers. This could be improved by editing layer creation to generate a new layer per polygon within a GeoJSON file, as opposed to one layer per GeoJSON import.
+- The application performs slows down a little when enabling editing on more complex GeoJSON data layers. This could be improved by editing layer creation to generate a new layer per polygon within a GeoJSON file, as opposed to one layer per GeoJSON import.
 - The Leaflet-Geoman package doesn't include easily accessible TypeScript types, so the `Map.tsx` file includes a `// @ts-nocheck` to work around that limitation.
 
 ## Screenshots
