@@ -20,11 +20,11 @@ import shadowUrl from 'leaflet/dist/images/marker-shadow.png';
 
 const {MapContainer} = ReactLeaflet;
 
-//Geoman provides advanced editing capabilities (needed for MultiPolygons)
+// Geoman provides advanced editing capabilities (needed for MultiPolygons)
 const EditingControls = ({ geoJson, onUpdateGeoJson }) => {
   const context = useLeafletContext();
 
-
+  // Use Leaflet Geoman to add editing capabilities and events
   useEffect(() => {
     const leafletContainer = context.layerContainer || context.map;
 
@@ -72,8 +72,8 @@ const EditingControls = ({ geoJson, onUpdateGeoJson }) => {
     };
   }, [context]);
 
+  // If a new file is imported, center on that new GeoJSON object
   useEffect(() => {
-    // Center on new GeoJSON object
     const leafletContainer = context.layerContainer || context.map;
     let latestGeoJson = geoJson[geoJson.length-1]
 
