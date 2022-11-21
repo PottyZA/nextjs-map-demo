@@ -18,7 +18,7 @@ import shadowUrl from 'leaflet/dist/images/marker-shadow.png';
 
 const {MapContainer} = ReactLeaflet;
 
-import sampleGeoJson from "../../utils/samples/cape-town.geojson.txt"
+import sampleGeoJson from "../../samples/cape-town.geojson.txt"
 
 type MapProps = {
   children: JSX.Element
